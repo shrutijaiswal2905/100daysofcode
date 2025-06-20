@@ -25,3 +25,31 @@ public:
         
     }
 };
+
+
+/*}
+    // Iterative approach
+    TreeNode* invertTree(TreeNode* root) {
+        if (root == nullptr) {
+            return nullptr;
+        }
+        std::queue<TreeNode*> queue;
+        queue.push(root);
+        while (!queue.empty()) {
+            TreeNode* node = queue.front();
+            queue.pop();
+            // Swap nodes
+            TreeNode* temp = node->left;
+            node->left = node->right;
+            node->right = temp;
+            // Add left and right children to the queue
+            if (node->left != nullptr) {
+                queue.push(node->left);
+            }
+            if (node->right != nullptr) {
+                queue.push(node->right);
+            }
+        }
+        return root;
+    }
+};*/
